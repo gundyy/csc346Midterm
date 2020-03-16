@@ -1,0 +1,30 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Select Example</title>
+     <script>
+         function getCar(me){
+             if(me.value == "none"){
+                 document.getElementById("picked").innerHTML = "Please pick a car!";
+             }else{
+                console.log(me.value);
+                document.getElementById("picked").innerHTML = "You Picked " + me.value + "!";
+             }
+         }
+     </script>
+ </head>
+ <body>
+     <select id="cars" onchange="getCar(this)">
+         <option value="none">Pick a car</option>
+         <option value="volvo">Volvo</option>
+         <option value="saab">Saab</option>
+         <option value ="mercedes">Mercedes</option>
+         <option value ="audi">Audi</option>
+     </select>
+
+     <h1 id="picked">Please pick a car!</h1>
+     
+ </body>
+ </html>
